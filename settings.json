@@ -1,375 +1,191 @@
 {
-  // VScode主题配置
-  "workbench.iconTheme": "file-icons",
-  "workbench.colorTheme": "Dracula Soft",
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": true,
-  "workbench.editor.limit.value": 5, // 打开的编辑器的最大数量（默认为10，超出数量会自动关闭）
-  "workbench.activityBar.visible": true,
-  "workbench.editor.tabCloseButton": "left",
-  "workbench.list.smoothScrolling": true,
-  "workbench.productIconTheme": "Default",
-  "workbench.sideBar.location": "left",
-  "workbench.tree.expandMode": "singleClick",
-  "workbench.tree.indent": 10,
-  "workbench.startupEditor": "none",
-  "workbench.editor.closeOnFileDelete": true,
-  "workbench.editor.highlightModifiedTabs": true,
-  // Editor
-  "editor.accessibilitySupport": "off",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.find.addExtraSpaceOnTop": false,
-  "editor.guides.bracketPairs": "active",
-  "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "interval",
-  "editor.tabSize": 2,
-  "editor.lineHeight": 24,
-  "editor.renderLineHighlight": "none",
-  "editor.renderWhitespace": "none",
-  "editor.fontFamily": "Consolas",
-  "editor.fontSize": 15,
-  "editor.cursorBlinking": "smooth",
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.wordWrap": "off", // 永不换行
-  "editor.wordWrapColumn": 400,
-  "editor.linkedEditing": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.stickyScroll.enabled": true,
-  "editor.hover.sticky": true,
-  // 自定义代码片段显示位置。top:自定义片段会优先显示在最上方
-  "editor.snippetSuggestions": "top",
-  // 代码提示默认选中项。
-  // coding时，VScode会给出很多提示，在所有的提示选项中会默认选中一个，这一配置就是表示默认选中哪一项。
-  // 此项配置十分精妙，自己改改探索一下。
-  // 可选值如下：
-  // "editor.snippetSuggestions": "first"   VScode将总是选中第一项
-  // "editor.snippetSuggestions": "recentlyUsed" （默认值）vscode将从代码提示中，预先选中最近使用过的项
-  // "editor.snippetSuggestions": "recentlyUsedByPrefix" （推介）vscode将从所有可用片段中，预先选中最近使用过的项
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.quickSuggestions": {
-    // 是否显示可能用到的示例代码.安装插件过多，建议选项也会非常多
-    "other": true,
-    "comments": true,
-    "strings": false
-  },
-  // 粘贴后的内容, 是否对此粘贴内容进行格式化
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    // 自动对 import 这种符合CommonJS规范语句进行排序，
-    // 要使此功能生效，要求使用到星号的语句写在当前文件顶部，例如：import * as Some from "R"
-    "source.organizeImport": true,
-    // 自动引入缺少的库
-    "source.addMissingImports": false,
-    "source.organizeImports": false,
-    "source.fixAll": true // 对所有文件，保存时自动格式化
-    // "source.fixAll.eslint": false, // 更细. 在文件保存时，eslint规则生效。此配置会影响 eslint.format.enable
-    // "source.fixAll.tslint": false, // 更细. 在文件保存时，tslint规则生效。 此配置会影响 typescript.validate.enable
-    // "source.fixAll.stylelint": false // 更细. 在文件保存时，stylelint样式规则生效
-  },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "window.autoDetectColorScheme": true,
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "extensions.ignoreRecommendations": true,
-  // 文件默认行尾字符
-  "files.eol": "\n",
-  "files.insertFinalNewline": true,
-  "files.simpleDialog.enable": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontWeight": "300",
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "terminal.integrated.tabs.enabled": true,
-  // 配置 vscode 默认打开外部终端为 Cmder. 注意本机如果没安装第三方终端，那么无需配置此项
-  "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
-  // 配置 vscode 内部集成 Cmder 终端
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [
-        "/k D:\\Asoftware\\cmder\\vendor\\init.bat"
-      ],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    }
-  },
-  "scm.diffDecorationsGutterWidth": 2,
-  "debug.onTaskErrors": "debugAnyway",
+  // 文件目录图标
+  "workbench.iconTheme": "vscode-icons",
+  // vscode 调整窗口的缩放级别
+  "window.zoomLevel": 0.5,
+  // vscode 代码字体大小
+  "editor.fontSize": 14,
+  //设置文字行高
+  // "editor.lineHeight": 24,
+  // 设置字体
+  // "editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+  //开启行数提示
+  "editor.lineNumbers": "on",
+  // 在输入时显示含有参数文档和类型信息的小面板。
+  "editor.parameterHints.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  // 移动文件或者修改文件名时，是否自动更新引用了此文件的所有文件
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.validate.enable": false,
+  // 每次保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  // 空格键所占字符数
+  "editor.tabSize": 2,
+  // 代码自动换行
+  "editor.wordWrap": "on",
+  // 开启 vscode 文件路径导航
   "breadcrumbs.enabled": true,
-  // 配置打开html文件的默认浏览器
-  "open-in-browser.default": "chrome",
-  // VScode进行文件搜索时，不搜索这些区域。
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/*.code-search": true,
-    "**/.DS_Store": true,
-    "**/.git": true,
-    "**/.gitignore": true,
-    "**/.idea": true,
-    "**/.svn": true,
-    "**/.vscode": true,
-    "**/build": true,
-    "**/dist": true,
-    "**/tmp": true,
-    "**/yarn.lock": true,
-    "**/assets": true,
-    "**/.history": true,
-    "vite.config.ts.timestamp-*": true,
-    "**/pnpm-lock.yaml": true
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  //  #让函数(名)和后面的括号之间加个空格
+  // "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  // 预览模式关闭
+  "workbench.editor.enablePreview": true,
+  // 保存时运行的代码ESLint操作类型。
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
-  // 配置是否在左侧目录列表中显示该文件/文件夹
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/*.g.dart": true
+  // --------------------  vetur 配置  --------------------
+  // vue文件默认格式化工具：vetur,vue 格式 格式化插件
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur",
+    "editor.formatOnSave": true // 保存时是否自动格式化
   },
-  // 配置文件关联
-  // 比如小程序中的 .wxss 这种文件，会把它作为css文件来处理，以便相关插件提供对应的css的语法提示，css的格式化等。
-  "files.associations": {
-    "*.wxss": "css",
-    "*.cjson": "jsonc",
-    "*.wxs": "javascript",
-    "*.ts": "typescript",
-    "*.vue": "vue",
-    "*.dart": "dart",
-    "*.json": "jsonc",
-    ".prettierrc": "jsonc"
-  },
+  // json格式 格式化插件
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[handlebars]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
+  // js格式 格式化插件
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 配置 ESLint 检查的文件类型
+  "eslint.validate": ["javascript", "vue", "html", "javascriptreact"],
+  // 指定 vscode 的 eslint 所处理的文件的后缀
+  "eslint.options": {
+    "extensions": [".js", ".vue", ".ts", ".jsx", ".tsx"]
   },
-  "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-  },
-  // 配置emmet是否启用tab展开缩写
-  // vscode已经内置emmet,这一设置最大作用是：当输入的文本不属于Emmet定义的缩写规则时，依然允许使用Tab键进行扩展。此时会提示自定义的缩写语句，以及各插件自定义的缩写语句.
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.includeLanguages": {
-    "wxml": "html",
-    "vue-html": "html",
-    "javascript": "javascriptreact",
-    "jsx-sublime-babel-tags": "javascriptreact"
-  },
-  "errorLens.enabledDiagnosticLevels": [
-    "warning",
-    "error"
-  ],
-  "errorLens.excludeBySource": [
-    "Grammarly",
-    "eslint"
-  ],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "html",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "markdown",
-    "json",
-    "jsonc",
-    "json5"
-  ],
-  "css.lint.hexColorLength": "ignore",
-  // 在push代码时，是否先自动从远端拉取代码
-  "git.autofetch": true,
+  // 在onSave还是onType时执行linter。默认为onType。
+  "eslint.run": "onSave",
+  // 启用ESLint作为已验证文件的格式化程序。
+  "eslint.format.enable": true,
+  // 语言标识符的数组，为此ESLint扩展应被激活，并应尝试验证文件。
+  "eslint.probe": ["javascript", "javascriptreact", "vue-html", "vue", "html"],
   "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.untrackedChanges": "separate",
-  "git.ignoreRebaseWarning": true,
+  "editor.quickSuggestions": {
+    "strings": true,
+    "singleQuote": true
+  },
+  // #这个按用户自身习惯选择
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // #让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "printWidth": 200,
+      "tabWidth": 2, // prettier的tabWidth未明确设置时，取"vetur.format.options.tabSize" （useTabs 工作方式相同）
+      // 格式化不加分号
+      "semi": false,
+      // 格式化以单引号为主
+      "singleQuote": true,
+      "trailingComma": "none", // 禁止末尾添加逗号
+      "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 函数括号前是否加空格
+      "typescript.format.insertSpaceBeforeFunctionParenthesis": true, // 函数括号前是否加空格
+      "arrowParens": "avoid" //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+    },
+    "js-beautify-html": {
+      // "wrap_attributes": "force-aligned",
+      "wrap_attributes": "aligned-multiple", //当超出折行长度时，将属性进行垂直对齐
+      "wrap_line_length": 200,
+      "wrap_width_line": false,
+      "semi": false,
+      "singleQuote": true,
+      "max_preserve_newlines": 0
+    },
+    "prettyhtml": {
+      "printWidth": 300, //每行300字符
+      "singleQuote": true, //单引号强制转双引号
+      "wrapAttributes": false,
+      "sortAttributes": true
+    }
+  },
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // "vetur.format.defaultFormatter.js": "prettier",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "workbench.editor.showTabs": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
   },
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.menus": {
-    "editor": {
-      "blame": false,
-      "clipboard": true,
-      "compare": true,
-      "history": false,
-      "remote": false
-    },
-    "editorGroup": {
-      "blame": true,
-      "compare": false
-    },
-    "editorTab": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "explorer": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "scm": {
-      "authors": true
-    },
-    "scmGroup": {
-      "compare": true,
-      "openClose": true,
-      "stash": true
-    },
-    "scmGroupInline": {
-      "stash": true
-    },
-    "scmItem": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": false,
-      "stash": true
-    }
+  "gitlens.keymap": "alternate",
+  "gitlens.views.lineHistory.enabled": true,
+  // 文件折叠控制
+  "explorer.compactFolders": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // css2rem插件: 书写css时，px单位自动提示是否转换为rem单位
-  // 此处根字体大小设置为100（默认为16）, 注意与你项目中rem数值保持一致
-  "cssrem.rootFontSize": 100,
-  "svg.preview.mode": "svg",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "debug.openDebug": "openOnDebugBreak", // 断点调试时，遇到断点，自动显示调试视图。（全局，不可为每种语言单独配置）
-  /// **python开发专用配置**
-  "python.linting.enabled": false, // 是否格式化python文件
-  "minapp-vscode.disableAutoConfig": true, // 微信小程序是否自动配置
-  /// **apicloud开发专用配置** 。
-  "apicloud.port": "23450", // 设置apicloud在vscode中的wifi真机同步时的端口
-  "apicloud.subdirectories": "/apicloudproject", // 设置apicloud在vscode中的wifi真机同步根目录，默认可不设置
-  /// **dart语言专用配置**
-  "dart.checkForSdkUpdates": false,
-  "dart.warnWhenEditingFilesOutsideWorkspace": true,
-  "dart.openDevTools": "flutter",
-  "dart.enableCompletionCommitCharacters": true,
-  "dart.lineLength": 120,
-  "dart.previewFlutterUiGuides": true,
-  "dart.debugSdkLibraries": true,
-  "dart.debugExternalPackageLibraries": true,
-  "[dart]": {
-    // 保存文件时，是否自动格式化代码，
-    "editor.formatOnSave": true,
-    // 当你输入特定字符时，是否自动格式化代码，(比如输入 `;` 和 `}`).
-    "editor.formatOnType": true,
-    // 在120个字符处画一条引导线，这个范围内的dart代码将被格式化。
-    "editor.rulers": [
-      120
-    ],
-    // 禁用与所选内容匹配的单词的内置突出显示。如果不这样做，所选文本的所有实例都将突出显示，从而影响Dart突出显示所选变量的精确引用的能力。
-    "editor.selectionHighlight": false,
-    // 默认情况下，当处于“代码片段模式”（在插入的代码中编辑占位符）时，VS会防止snippets弹出打开。
-    // 如果设置为“false”，则表示允许完成操作打开，就像不在代码段占位符中
-    "editor.suggest.snippetsPreventQuickSuggestions": true,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    // 允许使用按<tab>速写代码片段，例如，输入“for”时，即使完成列表不可见。
-    "editor.tabCompletion": "onlySnippets",
-    // 默认情况下，当前的语言没有代码片段提示时，VS Code将使用当前文件中的你自己写过的单词来显示代码片段提示。
-    // 这导致代码完成在编辑注释和字符串时建议单词。 此设置将阻止这种情况
-    // 对于dart来说最好关闭，对于html和css建议开启
-    "editor.wordBasedSuggestions": false,
-    // 在文件底部添加新代码行时，强制所有文件都有一行空格。
-    "files.insertFinalNewline": true
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
   },
-  /// **java语言专用配置**
-  "java.jdt.ls.java.home": "C:/Program Files/Java/jdk-17.0.3.1",
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-1.8",
-      "path": "D:/allsofoware/java8"
-    },
-    {
-      "name": "JavaSE-11",
-      "path": "D:/allsofoware/java11",
-      "default": true
-    },
-    {
-      "name": "JavaSE-17",
-      "path": "D:/allsofoware/java17",
-      "default": true
-    }
-  ],
-  "[python]": {
-    "editor.formatOnType": true
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vscode-edge-devtools.webhint": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  // tab 代码补全
+  "files.associations": {
+    "*.wpy": "vue",
+    "*.vue": "vue",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript"
+  },
+  // 添加emmet支持vue文件
+  "emmet.includeLanguages": {
+    "wxml": "html",
+    "vue": "html"
+  },
+  // 两个选择器中是否换行
+  "minapp-vscode.disableAutoConfig": true,
+  //快速预览（右侧）
+  "editor.minimap.enabled": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "settingsSync.ignoredExtensions": [],
-  "javascript.preferences.autoImportFileExcludePatterns": [
-    "@vue/runtime-core",
-    "@vue/runtime-dom"
-  ],
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "@vue/runtime-core",
-    "@vue/runtime-dom"
-  ],
-  // 解决Vue2换行问题
-  "vetur.ignoreProjectWarning": true,
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatter.js": "vscode-typescript",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "auto"
-    },
-    "prettyhtml": {
-      "printWidth": 100,
-      "singleQuote": false,
-      "wrapAttributes": false,
-      "sortAttributes": false
-    },
-  },
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.semanticTokenColorCustomizations": null,
+  "editor.suggest.filterGraceful": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "settingsSync.ignoredSettings": [],
+  // 100 列后换行
+  "editor.wordWrapColumn": 200,
+  "files.autoSave": "afterDelay",
+  "git.confirmSync": false,
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  // #让prettier使用eslint的代码格式进行校验
+  "prettier.eslintIntegration": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  // style默认偏移一个indent
+  "vetur.format.styleInitialIndent": true,
+  // 定义匿名函数的函数关键字后面的空格处理。
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  // 定义函数参数括号前的空格处理方式。#让函数(名)和后面的括号之间加个空格
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "explorer.confirmDelete": true,
+  // 使用eslint-plugin-vue验证<template>中的vue-html
+  "vetur.validation.template": false
+  // 指定用在工作台中的颜色主题。
+  // "workbench.colorTheme": "One Dark Pro"
 }
